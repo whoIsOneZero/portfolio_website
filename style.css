@@ -20,6 +20,7 @@ body {
   background-image: url("images/shalom_background.png");
   background-size: cover;
   background-position: center;
+  background-attachment: fixed; /*parallax effect*/
 }
 
 .container {
@@ -375,6 +376,12 @@ nav .fa-solid {
 }
 
 /** CSS for small screen **/
+@media only screen and (max-width: 768px) {
+  #header {
+    background-attachment: scroll;
+  }
+}
+
 @media only screen and (max-width: 600px) {
   #header {
     background-image: url(images/shalom_phone_background.png);
