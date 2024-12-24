@@ -376,11 +376,11 @@ nav .fa-solid {
 }
 
 /** CSS for small screen **/
-@media only screen and (max-width: 768px) {
+/* @media only screen and (max-width: 768px) {
   #header {
     background-attachment: scroll;
   }
-}
+} */
 
 @media only screen and (max-width: 600px) {
   #header {
