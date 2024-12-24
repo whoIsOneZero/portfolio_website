@@ -41,7 +41,7 @@
           </div>
           <div class="about-col-2">
             <h1 class="sub-title">About Me</h1>
-            <p>
+            <!-- <p>
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco laboris
@@ -49,6 +49,18 @@
               reprehenderit in voluptate velit esse cillum dolore eu fugiat
               nulla pariatur. Excepteur sint occaecat cupidatat non proident,
               sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p> -->
+
+            <p>
+              I am a recent graduate with a Bachelor of Science in
+              Telecommunication Engineering, focusing on Machine Learning,
+              Cybersecurity, and Wireless Communication. I have a proven track
+              record in building innovative solutions to real-world problems.
+              <!-- ranging from machine learning-powered ransomware detection systems
+              to agricultural personal assistant applications.  -->
+              With a strong foundation in Python, cybersecurity, and software
+              development, I aim to contribute to impactful projects that
+              combine technology and innovation.
             </p>
 
             <div class="tab-titles">
@@ -82,15 +94,23 @@
             <div class="tab-contents" id="experience">
               <ul>
                 <li>
-                  <span>App Development<br /></span>
-                  Android, iOS, Windows, MacOS, Linux apps
+                  <span
+                    >Research Assistant and Cybersecurity Trainer<br
+                  /></span>
+                  V.I.A. Cybersecurity Training Lab, KNUST (Oct. 2024 -
+                  Present)<br />
+                  Developed a health monitoring solution integrating sensors,
+                  APIs, and machine learning for real-time analysis. Conducted
+                  hands-on cybersecurity training and set up secure lab
+                  environments for practical learning.
                 </li>
                 <li>
-                  <span>Web Development<br /></span>Websites, Web apps
-                </li>
-                <li>
-                  <span>Backend Development<br /> </span>APIs, Databases,
-                  Server-side logic
+                  <span>Cybersecurity Intern<br /></span>
+                  V.I.A. Cybersecurity Training Lab, KNUST (Sep. 2023 – Oct.
+                  2023)<br />
+                  Identified vulnerabilities through penetration testing,
+                  developed Python-based security tools, and gained expertise
+                  with tools like Burp Suite and Wireshark.
                 </li>
               </ul>
             </div>
@@ -99,15 +119,17 @@
             <div class="tab-contents" id="education">
               <ul>
                 <li>
-                  <span>App Development<br /></span>
-                  Android, iOS, Windows, MacOS, Linux apps
+                  <span>BSc. Telecommunication Engineering<br /></span>
+                  Kwame Nkrumah University of Science and Technology (Jan. 2021
+                  – Sep. 2024)<br />
+                  Relevant courses: C Programming, Computer Networking, and
+                  Digital Communication Systems.
                 </li>
                 <li>
-                  <span>Web Development<br /></span>Websites, Web apps
-                </li>
-                <li>
-                  <span>Backend Development<br /> </span>APIs, Databases,
-                  Server-side logic
+                  <span>Full Stack Software Engineering<br /></span>
+                  Africa Leadership Exchange (Jun. 2023 – Aug. 2024)<br />
+                  Skills acquired: programming (C, Python, JavaScript), data
+                  structures, database management, and algorithm design.
                 </li>
               </ul>
             </div>
@@ -115,23 +137,41 @@
         </div>
       </div>
     </div>
+
+    <!--SERVICES-->
+    <div id="services">
+      <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+          <div>
+            <h2>Service Title</h2>
+            <p>
+              Description: Lorem ipsum dolor sit amet, consectetur adipiscing
+              elit, sed do eiusmod tempor incididunt ut labore et dolore magna
+              aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+              laboris nisi ut aliquip ex ea commodo consequat.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      var tabLinks = document.getElementsByClassName("tab-links");
+      var tabContents = document.getElementsByClassName("tab-contents");
+
+      function openTab(tabName) {
+        for (tabLink of tabLinks) {
+          tabLink.classList.remove("active-link");
+        }
+
+        for (tabContent of tabContents) {
+          tabContent.classList.remove("active-tab");
+        }
+
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabName).classList.add("active-tab");
+      }
+    </script>
   </body>
-
-  <script>
-    var tabLinks = document.getElementsByClassName("tab-links");
-    var tabContents = document.getElementsByClassName("tab-contents");
-
-    function openTab(tabName) {
-      for (tabLink of tabLinks) {
-        tabLink.classList.remove("active-link");
-      }
-
-      for (tabContent of tabContents) {
-        tabContent.classList.remove("active-tab");
-      }
-
-      event.currentTarget.classList.add("active-link");
-      document.getElementById(tabName).classList.add("active-tab");
-    }
-  </script>
 </html>
