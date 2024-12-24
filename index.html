@@ -264,11 +264,11 @@
             <a href="images/my-cv.pdf" class="btn btn2">Download CV</a>
           </div>
           <div class="contact-right">
-            <form>
+            <form name="submit-to-google-sheet">
               <input type="text" name="Name" placeholder="Your Name" required />
               <input
                 type="email"
-                name="email"
+                name="Email"
                 placeholder="Your Email"
                 required
               />
@@ -279,6 +279,7 @@
               ></textarea>
               <button type="submit" class="btn btn2">Submit</button>
             </form>
+            <span id="msg"> </span>
           </div>
         </div>
       </div>
@@ -315,6 +316,29 @@
       function closeMenu() {
         sideMenu.style.right = "-200px";
       }
+    </script>
+
+    <script>
+      const scriptURL =
+        "https://script.google.com/macros/s/AKfycbwLwqueGGfAC9kWXZbleQPS59_T7ByeP0HvkOST6BeNq1BBUhj7UcavrFBgZVtrAipN/exec";
+      const form = document.forms["submit-to-google-sheet"];
+
+      /*Message*/
+      const msg = document.getElementById("msg");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        fetch(scriptURL, { method: "POST", body: new FormData(form) })
+          .then((response) => {
+            msg.innerHTML = "Message sent successfully.";
+            setTimeout(function () {
+              msg.innerHTML = "";
+            }, 5000);
+
+            form.reset();
+          })
+          .catch((error) => console.error("Error!", error.message));
+      });
     </script>
   </body>
 </html>
